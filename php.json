@@ -1,0 +1,309 @@
+{
+    "Public function": {
+        "prefix": "met",
+        "body": [
+            "public function $1()",
+            "{",
+            "\t$2",
+            "}"
+        ],
+        "description": "New public function"
+    },
+
+    "Public static function": {
+        "prefix": "static",
+        "body": [
+            "public static function $1()",
+            "{",
+            "\t $2",
+            "}"
+        ],
+        "description": "New public static function"
+    },
+
+    "Slug Options": {
+        "prefix": "sluggable",
+        "body": [
+            "public function getSlugOptions(): SlugOptions",
+            "{",
+            "\treturn SlugOptions::create()",
+            "\t\t->generateSlugsFrom('name')",
+            "\t\t->saveSlugsTo('slug');",
+            "}"
+        ],
+        "description": "New form public function"
+    },
+
+    "Public function form": {
+        "prefix": "form",
+        "body": [
+            "public function form(Form $$form): Form",
+            "{",
+            "\treturn $$form",
+            "\t\t->schema([",
+            "\t\t\t$1",
+            "\t\t]);",
+            "}"
+        ],
+        "description": "New form public function"
+    },
+
+    "Slug": {
+        "prefix": "slug",
+        "body": [
+            "protected static ?string $$slug = '$1';"
+        ],
+        "description": "New slug"
+    },
+
+    "Group": {
+        "prefix": "group",
+        "body": [
+            "protected static ?string $$navigationGroup = '$1';"
+        ],
+        "description": "New navigation group"
+    },
+
+    "icon": {
+        "prefix": "icon",
+        "body": [
+            "protected static ?string $$navigationIcon = '$1';"
+        ],
+        "description": "New navigation icon"
+    },
+
+    "label": {
+        "prefix": "label",
+        "body": [
+            "protected static ?string $$navigationLabel = '$1';"
+        ],
+        "description": "New navigation label"
+    },
+
+    "Sort": {
+        "prefix": "sort",
+        "body": [
+            "protected static ?int $$navigationSort = $1;"
+        ],
+        "description": "New navigation sort"
+    },
+
+    "Title": {
+        "prefix": "title",
+        "body": [
+            "protected static ?string $$title = $1;"
+        ],
+        "description": "New navigation title"
+    },
+
+    "model": {
+        "prefix": "model",
+        "body": [
+            "protected static ?string $$modelLabel = '$1';"
+        ],
+        "description": "New navigation model"
+    },
+
+    "cluster": {
+        "prefix": "cluster",
+        "body": [
+            "protected static ?string $$cluster = $1::class;"
+        ],
+        "description": "New navigation cluster"
+    },
+
+    "infolist": {
+        "prefix": "infolists",
+        "body": [
+            "public static function infolist(Infolist $$infolist): Infolist",
+            "{",
+            "\treturn $$infolist",
+            "\t\t->schema([",
+            "\t\t\t$1",
+            "\t\t]);",
+            "}"
+        ],
+        "description": "New form public function"
+    },
+
+    "Casts": {
+        "prefix": "casts",
+        "body": [
+            "protected function casts(): array",
+            "{",
+            "\t return [",
+            "\t\t $1",
+            "\t ];",
+            "}"
+        ],
+        "description": "New public static function"
+    },
+
+    "ForeignIdFor": {
+        "prefix": "fid",
+        "body": [
+            "$$table->foreignIdFor($1::class)->constrained()->cascadeOnDelete();"
+        ],
+        "description": "New foreign id for"
+    },
+
+    "ForeignId": {
+        "prefix": "fi",
+        "body": [
+            "$$table->foreignId($1)->references('')->on('')->cascadeOnDelete();"
+        ],
+        "description": "New foreign id for"
+    },
+
+    "String": {
+        "prefix": "tstring",
+        "body": [
+            "$$table->string($1);"
+        ],
+        "description": "New table string"
+    },
+
+    "Table Enum": {
+        "prefix": "enum",
+        "body": [
+            "$$table->enum('$1', $2::values())->default($2::DEFAULT);"
+        ],
+        "description": "New table enum"
+    },
+
+    "SoftDeletes": {
+        "prefix": "softdeletes",
+        "body": [
+            "$$table->softDeletes();"
+        ],
+        "description": "New soft deletes"
+    }, 
+
+    "TableInt": {
+        "prefix": "tint",
+        "body": [
+            "$$table->integer($1);"
+        ],
+        "description": "New table integer"
+    }, 
+
+    "Table longtext": {
+        "prefix": "text",
+        "body": [
+            "$$table->longText($1);"
+        ],
+        "description": "New table long text"
+    }, 
+
+    "TableString": {
+        "prefix": "tstring",
+        "body": [
+            "$$table->string($1);"
+        ],
+        "description": "New soft deletes"
+    }, 
+
+    "DropSoftDeletes": {
+        "prefix": "dropsoftdeletes",
+        "body": [
+            "$$table->dropSoftDeletes();"
+        ],
+        "description": "drop soft deletes"
+    }, 
+
+    "DropColumn": {
+        "prefix": "dropColumn",
+        "body": [
+            "$$table->dropColumn($1);"
+        ],
+        "description": "drop table column"
+    }, 
+
+    "BelongsTo": {
+        "prefix": "belongsto",
+        "body": [
+            "public function $1(): BelongsTo",
+            "{",
+            "\t return $$this->belongsTo($2::class);",
+            "}"
+        ],
+        "description": "New belongs to"
+    },
+
+    "BelongsToMany": {
+        "prefix": "belongstomany",
+        "body": [
+            "public function $1(): BelongsToMany",
+            "{",
+            "\t return $$this->belongsToMany($2::class);",
+            "}"
+        ],
+        "description": "New belongs to many"
+    },
+
+    "HasMany": {
+        "prefix": "hasmany",
+        "body": [
+            "public function $1(): HasMany",
+            "{",
+            "\t return $$this->hasMany($2::class);",
+            "}"
+        ],
+        "description": "New has many"
+    },
+
+    "HasManythrough": {
+        "prefix": "hasmanythrough",
+        "body": [
+            "public function $1(): HasManyThrough",
+            "{",
+            "\t return $$this->hasManyThrough($2::class, $3::class);",
+            "}"
+        ],
+        "description": "New has many through relationship"
+    },
+
+    "HasOne": {
+        "prefix": "hasone",
+        "body": [
+            "public function $1(): HasOne",
+            "{",
+            "\t return $$this->hasOne($2::class);",
+            "}"
+        ],
+        "description": "New has one rel"
+    },
+
+    "MorphTo": {
+        "prefix": "morphto",
+        "body": [
+            "public function $1(): MorphTo",
+            "{",
+            "\treturn $$this->morphTo();",
+            "}"
+        ],
+        "description": "New morph one rel"
+    },
+
+    "MorphOne": {
+        "prefix": "morphone",
+        "body": [
+            "public function $1(): MorphOne",
+            "{",
+            "\treturn $$this->morphOne($2::class, 'modelable');",
+            "}"
+        ],
+        "description": "New morph one rel"
+    },
+
+    "MorphMany": {
+        "prefix": "morphmany",
+        "body": [
+            "public function $1(): MorphMany",
+            "{",
+            "\treturn $$this->morphMany($2::class, 'modelable');",
+            "}"
+        ],
+        "description": "New morph many rel"
+    }
+}
