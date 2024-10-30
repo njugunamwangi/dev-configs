@@ -305,5 +305,51 @@
             "}"
         ],
         "description": "New morph many rel"
+    },
+
+    "GetColor": {
+        "prefix": "getColor",
+        "body": [
+            "public function getColor(): string | array | null",
+            "{",
+            "\treturn match($this) {",
+            "\t\tself::$1 => $2,",
+            "\t};",
+            "}"
+        ]
+    },
+
+    "GetIcon": {
+        "prefix": "getIcon",
+        "body": [
+            "public function getIcon(): ?string",
+            "{",
+            "\treturn match($this) {",
+            "\t\tself::$1 => $2,",
+            "\t};",
+            "}"
+        ]
+    },
+
+    "GetLabel": {
+        "prefix": "getLabel",
+        "body": [
+            "public function getLabel(): ?string",
+            "{",
+            "\treturn match($this) {",
+            "\t\tself::$1 => $2,",
+            "\t};",
+            "}"
+        ]
+    },
+
+    "Values": {
+        "prefix": "values",
+        "body": [
+            "public static function values(): array",
+            "{",
+            "\treturn array_column(self::cases(), 'value');",
+            "}"
+        ]
     }
 }
