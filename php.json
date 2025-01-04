@@ -211,6 +211,36 @@
         "description": "drop soft deletes"
     }, 
 
+    "Global Search": {
+        "prefix": "search",
+        "body": [
+            "protected static ?string $$recordTitleAttribute = 'name';",
+        ],
+        "description": "global search result"
+    }, 
+
+    "Searchable Columns": {
+        "prefix": "searchable",
+        "body": [
+            "public static function getGloballySearchableAttributes(): array",
+            "{",
+            "\treturn ['name', 'slug'];",
+            "}",
+        ],
+        "description": "Search across multiple columns"
+    }, 
+
+    "Search Results URLs": {
+        "prefix": "searchUrl",
+        "body": [
+            "public static function getGlobalSearchResultUrl(Model $$record): string",
+            "{",
+            "\treturn $1::getUrl('edit', ['record' => $$record]);",
+            "}"
+        ],
+        "description": "Search results url"
+    }, 
+
     "DropColumn": {
         "prefix": "dropColumn",
         "body": [
