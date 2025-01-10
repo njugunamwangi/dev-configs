@@ -235,11 +235,25 @@
         "body": [
             "public static function getGlobalSearchResultUrl(Model $$record): string",
             "{",
-            "\treturn $1::getUrl('edit', ['record' => $$record]);",
+            "\treturn $1::getUrl('view', ['record' => $$record]);",
             "}"
         ],
         "description": "Search results url"
-    }, 
+    },
+
+    "Eloquent Query": {
+        "prefix": "eloquentQuery",
+        "body": [
+            "public static function getEloquentQuery(): Builder",
+            "{",
+            "\treturn parent::getEloquentQuery()",
+            "\t\t->withoutGlobalScopes([",
+            "\t\t\tSoftDeletingScope::class,",
+            "\t\t]);",
+            "}",
+        ],
+        "description": "get eloquent query"
+    },
 
     "DropColumn": {
         "prefix": "dropColumn",
