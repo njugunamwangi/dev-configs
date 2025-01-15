@@ -1,6 +1,9 @@
 alias aliases="code ~/.bash_aliases"
 alias src="source ~/.zshrc"
 alias hrd="cd ~/Herd"
+alias aliases="code ~/.bash_aliases"
+alias src="source ~/.zshrc"
+alias hrd="cd ~/Herd"
 
 # laravel
 alias ln="laravel new "
