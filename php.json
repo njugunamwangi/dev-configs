@@ -150,17 +150,41 @@
     "ForeignId": {
         "prefix": "fi",
         "body": [
-            "$$table->foreignId($1)->references('')->on('')->cascadeOnDelete();",
+            "$$table->foreignId('$1')->references('id')->on('$2')->cascadeOnDelete();",
         ],
         "description": "New foreign id for"
     },
 
-    "String": {
+    "Table String": {
         "prefix": "tstring",
         "body": [
-            "$$table->string($1);",
+            "$$table->string('$1');",
         ],
         "description": "New table string"
+    },
+
+    "Table Boolean": {
+        "prefix": "boolean",
+        "body": [
+            "$$table->boolean('$1')->default(true);",
+        ],
+        "description": "New table boolean"
+    },
+
+    "Table Decimal": {
+        "prefix": "decimal",
+        "body": [
+            "$$table->decimal('$1');",
+        ],
+        "description": "New table decimal"
+    },
+
+    "Table Timestamp": {
+        "prefix": "timestamp",
+        "body": [
+            "$$table->timestamp('$1');",
+        ],
+        "description": "New table timestamp"
     },
 
     "Table Enum": {
@@ -415,5 +439,15 @@
             "\t];",
             "}"
         ]
-    }
+    },
+
+    "blameable": {
+        "prefix": "blameable",
+        "body": [
+            "$$table->foreignId('created_by')->references('id')->on('users')->cascadeOnDelete();",
+            "$$table->foreignId('deleted_by')->nullable()->references('id')->on('users')->cascadeOnDelete();",
+            "$$table->foreignId('updated_by')->nullable()->references('id')->on('users')->cascadeOnDelete();",
+        ],
+        "description": "Get blameable traits for migrations"
+    },
 }
