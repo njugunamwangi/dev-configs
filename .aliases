@@ -104,29 +104,8 @@ alias soft-reset="git reset --soft HEAD~1"
 alias 'user.name'="git config user.name "
 alias 'user.email'="git config user.email "
 
-# projects
-alias erp="cursor ~/Herd/erp"
-alias liquor="cursor ~/Herd/liquor-store"
-alias blog="cursor ~/Herd/larablog"
-alias dkf="cursor ~/Herd/dkf-admin"
-alias lms="cursor ~/Herd/edtech"
-alias drones="cursor ~/Herd/drones"
-alias book="cursor ~/Herd/larabook"
-alias res="cursor ~/Herd/reservation"
-alias inv="cursor ~/Herd/inventory"
-
-# HTB
-alias htb="openvpn ~/Downloads/htb/lab_ndachi_htb.ovpn"
-alias acad="sudo openvpn ~/Downloads/htb/aws/academy-regular.ovpn"
-
 # Packages
 alias debugbar="composer require barryvdh/laravel-debugbar --dev"
-
-# AWS
-alias connect-aws-demo="ssh -i ~/.ssh/demo.cer ubuntu@aws-demo"
-alias connect-erp="ssh -i ~/.ssh/erp.cer ubuntu@erp-aws"
-alias eth="ssh -i ~/.ssh/eth.cer 
-eth@ec2-18-212-102-233.compute-1.amazonaws.com"
 
 # Python
 alias py="python3"
