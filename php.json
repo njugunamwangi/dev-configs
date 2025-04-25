@@ -9,7 +9,6 @@
         ],
         "description": "New public function"
     },
-
     "Public static function": {
         "prefix": "static",
         "body": [
@@ -20,7 +19,6 @@
         ],
         "description": "New public static function"
     },
-
     "Slug Options": {
         "prefix": "sluggable",
         "body": [
@@ -33,7 +31,6 @@
         ],
         "description": "New form public function"
     },
-
     "Public function form": {
         "prefix": "form",
         "body": [
@@ -47,7 +44,6 @@
         ],
         "description": "New form public function"
     },
-
     "Slug": {
         "prefix": "slug",
         "body": [
@@ -55,7 +51,6 @@
         ],
         "description": "New slug"
     },
-
     "Group": {
         "prefix": "group",
         "body": [
@@ -63,7 +58,6 @@
         ],
         "description": "New navigation group"
     },
-
     "icon": {
         "prefix": "icon",
         "body": [
@@ -71,7 +65,6 @@
         ],
         "description": "New navigation icon"
     },
-
     "label": {
         "prefix": "label",
         "body": [
@@ -79,7 +72,6 @@
         ],
         "description": "New navigation label"
     },
-
     "Sort": {
         "prefix": "sort",
         "body": [
@@ -87,7 +79,6 @@
         ],
         "description": "New navigation sort"
     },
-
     "Title": {
         "prefix": "title",
         "body": [
@@ -95,7 +86,6 @@
         ],
         "description": "New navigation title"
     },
-
     "model": {
         "prefix": "model",
         "body": [
@@ -103,7 +93,6 @@
         ],
         "description": "New navigation model"
     },
-
     "cluster": {
         "prefix": "cluster",
         "body": [
@@ -111,7 +100,6 @@
         ],
         "description": "New navigation cluster"
     },
-
     "infolist": {
         "prefix": "infolists",
         "body": [
@@ -125,7 +113,6 @@
         ],
         "description": "New form public function"
     },
-
     "Casts": {
         "prefix": "casts",
         "body": [
@@ -138,7 +125,6 @@
         ],
         "description": "New public static function"
     },
-
     "ForeignIdFor": {
         "prefix": "fid",
         "body": [
@@ -146,7 +132,6 @@
         ],
         "description": "New foreign id for"
     },
-
     "ForeignId": {
         "prefix": "fi",
         "body": [
@@ -154,7 +139,6 @@
         ],
         "description": "New foreign id for"
     },
-
     "Table String": {
         "prefix": "tstring",
         "body": [
@@ -162,7 +146,6 @@
         ],
         "description": "New table string"
     },
-
     "Table Boolean": {
         "prefix": "boolean",
         "body": [
@@ -170,7 +153,6 @@
         ],
         "description": "New table boolean"
     },
-
     "Table Decimal": {
         "prefix": "decimal",
         "body": [
@@ -178,7 +160,6 @@
         ],
         "description": "New table decimal"
     },
-
     "Table Timestamp": {
         "prefix": "timestamp",
         "body": [
@@ -186,7 +167,6 @@
         ],
         "description": "New table timestamp"
     },
-
     "Table Enum": {
         "prefix": "enum",
         "body": [
@@ -194,55 +174,48 @@
         ],
         "description": "New table enum"
     },
-
     "SoftDeletes": {
         "prefix": "softdeletes",
         "body": [
             "$$table->softDeletes();",
         ],
         "description": "New soft deletes"
-    }, 
-
+    },
     "TableInt": {
         "prefix": "tint",
         "body": [
-            "$$table->integer($1);",
+            "$$table->integer('$1');",
         ],
         "description": "New table integer"
-    }, 
-
+    },
     "Table longtext": {
         "prefix": "text",
         "body": [
-            "$$table->longText($1);",
+            "$$table->longText('$1');",
         ],
         "description": "New table long text"
-    }, 
-
+    },
     "TableString": {
         "prefix": "tstring",
         "body": [
-            "$$table->string($1);",
+            "$$table->string('$1');",
         ],
         "description": "New soft deletes"
-    }, 
-
+    },
     "DropSoftDeletes": {
         "prefix": "dropsoftdeletes",
         "body": [
             "$$table->dropSoftDeletes();",
         ],
         "description": "drop soft deletes"
-    }, 
-
+    },
     "Global Search": {
         "prefix": "search",
         "body": [
             "protected static ?string $$recordTitleAttribute = 'name';",
         ],
         "description": "global search result"
-    }, 
-
+    },
     "Searchable Columns": {
         "prefix": "searchable",
         "body": [
@@ -252,8 +225,7 @@
             "}",
         ],
         "description": "Search across multiple columns"
-    }, 
-
+    },
     "Search Results URLs": {
         "prefix": "searchUrl",
         "body": [
@@ -264,7 +236,6 @@
         ],
         "description": "Search results url"
     },
-
     "Eloquent Query": {
         "prefix": "eloquentQuery",
         "body": [
@@ -278,15 +249,13 @@
         ],
         "description": "get eloquent query"
     },
-
     "DropColumn": {
         "prefix": "dropColumn",
         "body": [
             "$$table->dropColumn($1);",
         ],
         "description": "drop table column"
-    }, 
-
+    },
     "BelongsTo": {
         "prefix": "belongsto",
         "body": [
@@ -297,7 +266,6 @@
         ],
         "description": "New belongs to"
     },
-
     "BelongsToMany": {
         "prefix": "belongstomany",
         "body": [
@@ -308,7 +276,6 @@
         ],
         "description": "New belongs to many"
     },
-
     "HasMany": {
         "prefix": "hasmany",
         "body": [
@@ -319,7 +286,6 @@
         ],
         "description": "New has many"
     },
-
     "HasManythrough": {
         "prefix": "hasmanythrough",
         "body": [
@@ -330,7 +296,6 @@
         ],
         "description": "New has many through relationship"
     },
-
     "HasOne": {
         "prefix": "hasone",
         "body": [
@@ -341,7 +306,6 @@
         ],
         "description": "New has one rel"
     },
-
     "MorphTo": {
         "prefix": "morphto",
         "body": [
@@ -352,7 +316,6 @@
         ],
         "description": "New morph one rel"
     },
-
     "Morphs": {
         "prefix": "morphs",
         "body": [
@@ -360,7 +323,6 @@
         ],
         "description": "morphs table columns"
     },
-
     "MorphOne": {
         "prefix": "morphone",
         "body": [
@@ -371,7 +333,6 @@
         ],
         "description": "New morph one rel"
     },
-
     "MorphMany": {
         "prefix": "morphmany",
         "body": [
@@ -382,7 +343,6 @@
         ],
         "description": "New morph many rel"
     },
-
     "GetColor": {
         "prefix": "getColor",
         "body": [
@@ -394,7 +354,6 @@
             "}"
         ]
     },
-
     "GetIcon": {
         "prefix": "getIcon",
         "body": [
@@ -406,7 +365,6 @@
             "}"
         ]
     },
-
     "GetLabel": {
         "prefix": "getLabel",
         "body": [
@@ -418,7 +376,6 @@
             "}"
         ]
     },
-
     "Values": {
         "prefix": "values",
         "body": [
@@ -428,7 +385,6 @@
             "}"
         ]
     },
-
     "getForm": {
         "prefix": "getForm",
         "body": [
@@ -440,7 +396,6 @@
             "}"
         ]
     },
-
     "blameable": {
         "prefix": "blameable",
         "body": [
@@ -450,4 +405,14 @@
         ],
         "description": "Get blameable traits for migrations"
     },
+    "Modelable": {
+        "prefix": "modelable",
+        "body": [
+            "public function modelable(): MorphTo",
+            "{",
+            "\treturn $$this->morphTo();",
+            "}",
+        ],
+        "description": "Get morph to model relationship"
+    }
 }
