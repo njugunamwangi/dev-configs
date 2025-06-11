@@ -103,11 +103,11 @@
     "infolist": {
         "prefix": "infolists",
         "body": [
-            "public static function infolist(Infolist $$infolist): Infolist",
+            "public static function infolist(Infolist $$infolist): Infolist$1",
             "{",
             "\treturn $$infolist",
             "\t\t->schema([",
-            "\t\t\t$1",
+            "\t\t\t$2",
             "\t\t]);",
             "}"
         ],
