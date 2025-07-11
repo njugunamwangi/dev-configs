@@ -34,15 +34,38 @@
     "Public function form": {
         "prefix": "form",
         "body": [
-            "public function form(Form $$form): Form",
+            "public function form(Form $$form): Form$1",
             "{",
             "\treturn $$form",
             "\t\t->schema([",
-            "\t\t\t$1",
+            "\t\t\t$2",
             "\t\t]);",
             "}"
         ],
         "description": "New form public function"
+    },
+    "Public function table": {
+        "prefix": "table",
+        "body": [
+            "public function table(Table $$table): Table$1",
+            "{",
+            "\treturn $$table",
+            "\t\t->query($2)",
+            "\t\t->columns([",
+            "\t\t\t$3",
+            "\t\t])",
+            "\t\t->filters([",
+            "\t\t\t// ...",
+            "\t\t])",
+            "\t\t->actions([",
+            "\t\t\t// ...",
+            "\t\t])",
+            "\t\t->bulkActions([",
+            "\t\t\t// ...",
+            "\t\t]);",
+            "\t}"
+        ],
+        "description": "New table public function"
     },
     "Slug": {
         "prefix": "slug",
@@ -259,7 +282,7 @@
     "BelongsTo": {
         "prefix": "belongsto",
         "body": [
-            "public function $1(): BelongsTo",
+            "public function $1(): BelongsTo$3",
             "{",
             "\treturn $$this->belongsTo($2::class);",
             "}"
@@ -269,7 +292,7 @@
     "BelongsToMany": {
         "prefix": "belongstomany",
         "body": [
-            "public function $1(): BelongsToMany",
+            "public function $1(): BelongsToMany$3",
             "{",
             "\treturn $$this->belongsToMany($2::class);",
             "}"
@@ -279,7 +302,7 @@
     "HasMany": {
         "prefix": "hasmany",
         "body": [
-            "public function $1(): HasMany",
+            "public function $1(): HasMany$3",
             "{",
             "\treturn $$this->hasMany($2::class);",
             "}"
@@ -289,7 +312,7 @@
     "HasManythrough": {
         "prefix": "hasmanythrough",
         "body": [
-            "public function $1(): HasManyThrough",
+            "public function $1(): HasManyThrough$4",
             "{",
             "\treturn $$this->hasManyThrough($2::class, $3::class);",
             "}"
@@ -299,7 +322,7 @@
     "HasOne": {
         "prefix": "hasone",
         "body": [
-            "public function $1(): HasOne",
+            "public function $1(): HasOne$3",
             "{",
             "\treturn $$this->hasOne($2::class);",
             "}"
@@ -309,7 +332,7 @@
     "MorphTo": {
         "prefix": "morphto",
         "body": [
-            "public function modelable(): MorphTo",
+            "public function modelable(): MorphTo$1",
             "{",
             "\treturn $$this->morphTo();",
             "}"
@@ -326,7 +349,7 @@
     "MorphOne": {
         "prefix": "morphone",
         "body": [
-            "public function $1(): MorphOne",
+            "public function $1(): MorphOne$3",
             "{",
             "\treturn $$this->morphOne($2::class, 'modelable');",
             "}"
@@ -336,7 +359,7 @@
     "MorphMany": {
         "prefix": "morphmany",
         "body": [
-            "public function $1(): MorphMany",
+            "public function $1(): MorphMany$3",
             "{",
             "\treturn $$this->morphMany($2::class, 'modelable');",
             "}"
@@ -414,5 +437,15 @@
             "}",
         ],
         "description": "Get morph to model relationship"
+    },
+    "Handle record creation": {
+        "prefix": "handleRecordCreation",
+        "body": [
+            "protected function handleRecordCreation(array $$data): Model$1",
+            "{",
+            "\treturn static::getModel()::create($2);",
+            "}",
+        ],
+        "description": "Customizing record creation process"
     }
 }
