@@ -2,12 +2,22 @@
     "Public function": {
         "prefix": "met",
         "body": [
-            "public function $1()",
+            "public function $1($2)",
             "{",
-            "\t$2",
+            "\t$3",
             "}"
         ],
         "description": "New public function"
+    },
+    "Protected function": {
+        "prefix": "pmet",
+        "body": [
+            "protected function $1($2)",
+            "{",
+            "\t$3",
+            "}"
+        ],
+        "description": "New protected function"
     },
     "Public static function": {
         "prefix": "static",
@@ -284,7 +294,7 @@
         "body": [
             "public function $1(): BelongsTo$3",
             "{",
-            "\treturn $$this->belongsTo($2::class);",
+            "\treturn $$this->belongsTo($2::class$4);",
             "}"
         ],
         "description": "New belongs to"
@@ -294,7 +304,7 @@
         "body": [
             "public function $1(): BelongsToMany$3",
             "{",
-            "\treturn $$this->belongsToMany($2::class);",
+            "\treturn $$this->belongsToMany($2::class$4);",
             "}"
         ],
         "description": "New belongs to many"
@@ -304,7 +314,7 @@
         "body": [
             "public function $1(): HasMany$3",
             "{",
-            "\treturn $$this->hasMany($2::class);",
+            "\treturn $$this->hasMany($2::class$4);",
             "}"
         ],
         "description": "New has many"
@@ -324,7 +334,7 @@
         "body": [
             "public function $1(): HasOne$3",
             "{",
-            "\treturn $$this->hasOne($2::class);",
+            "\treturn $$this->hasOne($2::class$4);",
             "}"
         ],
         "description": "New has one rel"
