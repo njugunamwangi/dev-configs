@@ -32,6 +32,7 @@ alias 'module.widget'="php artisan module:make:filament-widget"
 alias 'module.action'="php artisan module:make-action"
 alias 'module.factory'="php artisan module:make-factory"
 alias migration="php artisan make:migration "
+alias 'cache.clear'="php artisan cache:clear"
 alias 'icons.cache'="php artisan icons:cache"
 alias 'filament.cache'="php artisan filament:clear-cached-components"
 alias pa="php artisan "
@@ -93,6 +94,10 @@ alias 'plugin.resource'="php artisan filament-plugins:resource"
 alias 'plugin.page'="php artisan filament-plugins:page"
 alias 'plugin.widget'="php artisan filament-plugins:widget"
 alias 'plugin.list'="php artisan filament-plugins:list"
+
+# ssh 
+alias work="cat ~/temp/paysoko.txt | pbcopy"
+alias personal="cat ~/temp/personal.txt | pbcopy"
 
 # composer
 alias require="composer require "
