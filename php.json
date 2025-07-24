@@ -112,6 +112,23 @@
         ],
         "description": "New navigation sort"
     },
+    "Search": {
+        "prefix": "search",
+        "body": [
+            "protected static ?string $$recordTitleAttribute = '$1name';",
+        ],
+        "description": "Global search"
+    },
+    "Search Result URLs": {
+        "prefix": "result",
+        "body": [
+            "public static function getGlobalSearchResultUrl(Model$1 $$record): string",
+            "{",
+            "\treturn ${TM_FILENAME_BASE}::getUrl('view', ['record' => $$record]);",
+            "}",
+        ],
+        "description": "Global search result URLs"
+    },
     "Title": {
         "prefix": "title",
         "body": [
@@ -242,13 +259,6 @@
         ],
         "description": "drop soft deletes"
     },
-    "Global Search": {
-        "prefix": "search",
-        "body": [
-            "protected static ?string $$recordTitleAttribute = 'name';",
-        ],
-        "description": "global search result"
-    },
     "Searchable Columns": {
         "prefix": "searchable",
         "body": [
@@ -342,7 +352,7 @@
     "MorphTo": {
         "prefix": "morphto",
         "body": [
-            "public function modelable(): MorphTo$1",
+            "public function $1modelable(): MorphTo$2",
             "{",
             "\treturn $$this->morphTo();",
             "}"
@@ -352,7 +362,7 @@
     "Morphs": {
         "prefix": "morphs",
         "body": [
-            "$$table->morphs('modelable');"
+            "$$table->morphs('$1modelable');"
         ],
         "description": "morphs table columns"
     },
@@ -361,7 +371,7 @@
         "body": [
             "public function $1(): MorphOne$3",
             "{",
-            "\treturn $$this->morphOne($2::class, 'modelable');",
+            "\treturn $$this->morphOne($2::class, '$4modelable');",
             "}"
         ],
         "description": "New morph one rel"
@@ -371,7 +381,7 @@
         "body": [
             "public function $1(): MorphMany$3",
             "{",
-            "\treturn $$this->morphMany($2::class, 'modelable');",
+            "\treturn $$this->morphMany($2::class, '$4modelable');",
             "}"
         ],
         "description": "New morph many rel"
